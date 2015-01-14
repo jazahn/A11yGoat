@@ -10,56 +10,26 @@
 
     <title>Perceivable</title>
 
+
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="js/html5shiv-3.7.2.min.js"></script>
-    <script src="js/respond-1.4.2.min.js"></script>
+    <script src="../js/html5shiv-3.7.2.min.js"></script>
+    <script src="../js/respond-1.4.2.min.js"></script>
     <![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="css/carousel.css" rel="stylesheet">
+    <link href="../css/carousel.css" rel="stylesheet">
 </head>
 <!-- NAVBAR
 ================================================== -->
 <body>
 <div class="navbar-wrapper">
     <div class="container">
-ww
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">A11yGoat</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+
+        <nav id="navbar"></nav>
 
         <!-- Three columns of text below the carousel -->
         <div class="row">
@@ -71,7 +41,7 @@ ww
                 <!-- <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;"> -->
                 <h2>Input Elements</h2>
                 <p>Input elements require label tags. As per WCAG 2.0 1.1.1: "If non-text content is a control or accepts user input, then it has a name that describes its purpose."</p>
-                <p><a class="btn btn-default" href="#" role="button">View page &raquo;</a></p>
+                <p><a class="btn btn-default" href="label.html" role="button">View page &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <svg height="140" width="140">
@@ -103,30 +73,41 @@ ww
         </div><!-- /.row -->
 
     </div>
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+        <!-- FOOTER -->
+        <footer>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2015 Harvard University &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+
+    </div><!-- /.container -->
+
 </div>
-
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
-
-<div class="container marketing">
-
-    <!-- FOOTER -->
-    <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Harvard University &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    </footer>
-
-</div><!-- /.container -->
 
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/underscore-1.7.0.min.js"></script>
 <!-- <script src="../../assets/js/docs.min.js"></script> -->
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+
+<script>
+    $.get('../templates/navbar.html', function (data) {
+        template = _.template(data, {});
+        $('#navbar').html(template);
+    }, 'html');
+    $('#navbar').html(template);
+</script>
+
+
 </body>
 </html>
