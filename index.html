@@ -137,11 +137,15 @@
     <div class="row featurette">
         <div class="col-md-7">
             <h2 class="featurette-heading">What is A11yGoat?</h2>
-            <p class="lead">A11yGoat is an attempt to create a site that contains common accessibility flaws.</p>
+            <p class="lead">A11yGoat is an attempt to create a site that contains common accessibility flaws with the
+                purpose of teaching how to fix them. This is an open source project with no affiliation with any company
+                or institution. <a href="http://github.com/jazahn/A11yGoat">A11yGoat on Github</a></p>
         </div>
+        <!--
         <div class="col-md-5">
             <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
+        -->
     </div>
 
     <!--
@@ -164,7 +168,7 @@
     <!-- FOOTER -->
     <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Harvard University &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p><a href="https://github.com/jazahn/A11yGoat/blob/gh-pages/LICENSE.md">License</a></p>
     </footer>
 
 </div><!-- /.container -->
@@ -175,8 +179,15 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/underscore-1.7.0.min.js"></script>
 <!-- <script src="../../assets/js/docs.min.js"></script> -->
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+<script>
+    $.get('templates/analytics.html', function (data) {
+        template = _.template(data, {});
+        $('body').append(template);
+    }, 'html');
+</script>
 </body>
 </html>
