@@ -1,4 +1,5 @@
 # A11yGoat
+[public instance](http://jazahn.github.io/A11yGoat/)
 
 ## What is A11yGoat
 This is a site that has been made purposely inaccessible as a way to teach people about accessibility.
