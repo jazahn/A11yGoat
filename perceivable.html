@@ -5,6 +5,7 @@ description:
 ---
 <div class="row">
     {% for example in site.examples %}
+    {% if example.accessible == false %}
     <div class="col-lg-4">
         <svg height="140" width="140">
             <circle cx="70" cy="70" r="68" stroke="grey" stroke-width="3" fill="grey" />
@@ -13,20 +14,11 @@ description:
         <!-- <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;"> -->
         <h2>{{ example.title }}</h2>
         <p>Input elements require label tags. As per WCAG 2.0 1.1.1: "If non-text content is a control or accepts user input, then it has a name that describes its purpose."</p>
-        <p><a class="btn btn-default" href="label.html" role="button">View page &raquo;</a></p>
+        <p><a class="btn btn-default" href="{{ example.url | prepend: site.baseurl }}" role="button">View page &raquo;</a></p>
     </div><!-- /.col-lg-4 -->
+    {% endif %}
     {% endfor %}
 
-    <div class="col-lg-4">
-        <svg height="140" width="140">
-            <circle cx="70" cy="70" r="68" stroke="grey" stroke-width="3" fill="grey" />
-            <text x="40" y="75" fill="white" style="font-size: 2em;">1.1.1</text>
-        </svg>
-        <!-- <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;"> -->
-        <h2>Input Elements</h2>
-        <p>Input elements require label tags. As per WCAG 2.0 1.1.1: "If non-text content is a control or accepts user input, then it has a name that describes its purpose."</p>
-        <p><a class="btn btn-default" href="label.html" role="button">View page &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
         <svg height="140" width="140">
             <circle cx="70" cy="70" r="68" stroke="grey" stroke-width="3" fill="grey" />

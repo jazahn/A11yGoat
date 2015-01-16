@@ -6,10 +6,14 @@ description: > # this means to ignore newlines until "baseurl:"
   A11yGoat is an attempt to create a site that contains common accessibility
   flaws with the purpose of teaching how to fix them. This is an open source
   project with no affiliation with any company or institution.
-baseurl: "/A11yGoat/" # the subpath of your site, e.g. /blog/
+baseurl: "/A11yGoat" # the subpath of your site, e.g. /blog/
 url: "http://jazahn.github.io" # the base hostname & protocol for your site
 twitter_username: jazahn
 github_username:  jazahn
+
+collections:
+  examples:
+    output: true
 
 # Build settings
 markdown: kramdown
