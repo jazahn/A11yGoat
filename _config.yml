@@ -13,3 +13,6 @@ github_username:  jazahn
 
 # Build settings
 markdown: kramdown
+# GitHub Flavored Markdown
+kramdown:
+  input: GFM
