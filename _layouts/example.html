@@ -1,6 +1,14 @@
 ---
 layout: default
 ---
+{% if page.explanation %}
+<div class="row">
+    <div class="well">
+        {{ page.explanation | markdownify }}
+    </div>
+</div>
+{% endif %}
+
 <div class="example">
 
     <header class="example-header">
