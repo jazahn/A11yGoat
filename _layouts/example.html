@@ -1,14 +1,22 @@
 ---
 layout: default
 ---
-<div class="post">
+{% if page.explanation %}
+<div class="row">
+    <div class="well">
+        {{ page.explanation | markdownify }}
+    </div>
+</div>
+{% endif %}
 
-    <header class="post-header">
-        <h1 class="post-title">{{ example.title }}</h1>
-        <p class="post-meta">{{ example.description }}</p>
+<div class="example">
+
+    <header class="example-header">
+        <h1 class="example-title">{{ example.title }}</h1>
+        <p class="example-meta">{{ example.description }}</p>
     </header>
 
-    <article class="post-content">
+    <article class="example-content">
         {{ content }}
     </article>
 

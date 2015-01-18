@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
+  <title>Non-text</title>
   <meta name="description" content="A11yGoat is an attempt to create a site that contains common accessibility flaws with the purpose of teaching how to fix them. This is an open source project with no affiliation with any company or institution.
 ">
 
   <link rel="stylesheet" href="/A11yGoat/css/main.css">
-  <link rel="canonical" href="http://jazahn.github.io/A11yGoat/about/">
+  <link rel="canonical" href="http://jazahn.github.io/A11yGoat/examples/nontext.html">
   <link rel="alternate" type="application/rss+xml" title="A11yGoat" href="http://jazahn.github.io/A11yGoat/feed.xml" />
   <!-- Bootstrap core CSS -->
   <link href="/A11yGoat/css/bootstrap.min.css" rel="stylesheet">
@@ -62,10 +62,6 @@
       <div class="trigger">
         
           
-          <a class="page-link" href="/A11yGoat/about/">About</a>
-          
-        
-          
         
           
         
@@ -85,16 +81,73 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="post">
+        
+<div class="row">
+    <div class="well">
+        <p>Missing alt tags. Note that the alternative text needs to convey the purpose of the data, not necessarily describing it exactly. In general, adding alt descriptions to images is very easy. But different things need to be described in different ways. </p>
 
-  <header class="post-header">
-    <h1 class="post-title">About</h1>
-  </header>
+<p>Below are 4 items<br />
+ 1. An image that contains text.<br />
+ 2. An image that has a text explanation of it under the image. It does not require a fully description.<br />
+ 3. A non-image representation. This will need an <a href="http://www.w3.org/TR/WCAG20-TECHS/H28.html">abbr</a> tag.<br />
+ 4. An image that is functioning as the first letter of the text. And while we’re at it, how do you deal with lipsum? Hint, see the example above.</p>
 
-  <article class="post-content">
-    
+<p>‘Authors MAY, with caution, use aria-hidden to hide visibly rendered content from assistive technologies only if the act of hiding this content is intended to improve the experience for users of assistive technologies by removing redundant or extraneous content.’</p>
 
-  </article>
+<ul>
+  <li><a href="http://webaim.org/techniques/alttext/">alttext</a></li>
+  <li><a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-hidden">aira-hidden</a></li>
+  <li><a href="http://www.w3.org/TR/wai-aria/roles#presentation">role=’presentation’</a></li>
+</ul>
+
+    </div>
+</div>
+
+
+<div class="example">
+
+    <header class="example-header">
+        <h1 class="example-title"></h1>
+        <p class="example-meta"></p>
+    </header>
+
+    <article class="example-content">
+        <ul class="list-unstyled">
+    <li class="well">
+        <img src="/A11yGoat/img/why-not-zoidberg.jpg" alt="">
+    </li>
+    <li class="well">
+        <img src="/A11yGoat/img/why-not-zoidberg.jpg" alt=""><br>
+        <strong>Need an image? Why not Zoidberg?</strong>
+    </li>
+    <li class="well">
+        (╯°□°）╯︵ ┻━┻  ┬─┬ノ( º _ ºノ)
+    </li>
+    <li>
+        <img style="float: left;" src="/A11yGoat/img/L.jpeg" alt="">orem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin sed dolor in volutpat. Sed eu bibendum turpis. Quisque cursus mauris non dolor consectetur molestie. Ut placerat metus eget orci condimentum, vel sollicitudin ante porttitor. Integer a dictum ligula. Donec posuere mollis mattis. Maecenas id lectus convallis, volutpat velit et, pharetra ex. Etiam finibus lorem non sapien volutpat, non posuere lacus commodo. Pellentesque vehicula vestibulum augue, in lacinia tellus laoreet nec.
+    </li>
+ </ul>
+
+    </article>
+
+
+    <div style="width: 100%">
+        <div class="" align="center">
+            <button class="btn btn-default" type="button" id="switch_button">switch</button>
+        </div>
+    </div>
+    <script>
+        $('#switch_button').on('click', function(){
+            path = location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1);
+            filename = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            if(filename.search('_fixed.html') == -1) {
+                new_filename = filename.replace('.html', '_fixed.html');
+            } else {
+                new_filename = filename.replace('_fixed.html', '.html');
+            }
+            window.location.href = path + new_filename;
+        });
+    </script>
 
 </div>
 
