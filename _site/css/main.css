@@ -447,3 +447,43 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+/**
+ * Examples
+ */
+.example-meta {
+  font-size: 14px;
+  color: #828282; }
+
+.example-link {
+  display: block;
+  font-size: 24px; }
+
+.example-header {
+  margin-bottom: 30px; }
+
+.example-title {
+  font-size: 42px;
+  letter-spacing: -1px;
+  line-height: 1; }
+  @media screen and (max-width: 800px) {
+    .example-title {
+      font-size: 36px; } }
+
+.example-content {
+  margin-bottom: 30px; }
+  .example-content h2 {
+    font-size: 32px; }
+    @media screen and (max-width: 800px) {
+      .example-content h2 {
+        font-size: 28px; } }
+  .example-content h3 {
+    font-size: 26px; }
+    @media screen and (max-width: 800px) {
+      .example-content h3 {
+        font-size: 22px; } }
+  .example-content h4 {
+    font-size: 20px; }
+    @media screen and (max-width: 800px) {
+      .example-content h4 {
+        font-size: 18px; } }

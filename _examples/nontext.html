@@ -1,0 +1,36 @@
+---
+layout: example
+title: Non-text
+relatesto: 1.1.1
+description: "When using the img element, specify a short text alternative with the alt attribute. Note. The value of this attribute is referred to as 'alt text'.<br><br>
+When an image contains words that are important to understanding the content, the alt text should include those words. This will allow the alt text to play the same function on the page as the image. Note that it does not necessarily describe the visual characteristics of the image itself but must convey the same meaning as the image."
+accessible: false
+explanation: "Missing alt tags. Note that the alternative text needs to convey the purpose of the data, not necessarily describing it exactly. In general, adding alt descriptions to images is very easy. But different things need to be described in different ways. \n\n
+
+Below are 4 items\n
+1. An image that contains text.\n
+2. An image that has a text explanation of it under the image. It does not require a fully description.\n
+3. A non-image representation. This will need an [abbr](http://www.w3.org/TR/WCAG20-TECHS/H28.html) tag.\n
+4. An image that is functioning as the first letter of the text. And while we're at it, how do you deal with lipsum? Hint, see the example above.\n\n
+
+'Authors MAY, with caution, use aria-hidden to hide visibly rendered content from assistive technologies only if the act of hiding this content is intended to improve the experience for users of assistive technologies by removing redundant or extraneous content.'\n\n
+
+* [alttext](http://webaim.org/techniques/alttext/)\n
+* [aira-hidden](http://www.w3.org/TR/wai-aria/states_and_properties#aria-hidden)\n
+* [role='presentation'](http://www.w3.org/TR/wai-aria/roles#presentation)"
+---
+<ul class="list-unstyled">
+    <li class="well">
+        <img src="{{ "/img/why-not-zoidberg.jpg" | prepend: site.baseurl }}" alt="">
+    </li>
+    <li class="well">
+        <img src="{{ "/img/why-not-zoidberg.jpg" | prepend: site.baseurl }}" alt=""><br>
+        <strong>Need an image? Why not Zoidberg?</strong>
+    </li>
+    <li class="well">
+        (╯°□°）╯︵ ┻━┻  ┬─┬ノ( º _ ºノ)
+    </li>
+    <li>
+        <img style="float: left;" src="{{ "/img/L.jpeg" | prepend: site.baseurl }}" alt="">orem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin sed dolor in volutpat. Sed eu bibendum turpis. Quisque cursus mauris non dolor consectetur molestie. Ut placerat metus eget orci condimentum, vel sollicitudin ante porttitor. Integer a dictum ligula. Donec posuere mollis mattis. Maecenas id lectus convallis, volutpat velit et, pharetra ex. Etiam finibus lorem non sapien volutpat, non posuere lacus commodo. Pellentesque vehicula vestibulum augue, in lacinia tellus laoreet nec.
+    </li>
+ </ul>

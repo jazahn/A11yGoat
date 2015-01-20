@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Input Elements</title>
+  <title>Non-text</title>
   <meta name="description" content="A11yGoat is an attempt to create a site that contains common accessibility flaws with the purpose of teaching how to fix them. This is an open source project with no affiliation with any company or institution.
 ">
 
   <link rel="stylesheet" href="/A11yGoat/css/main.css">
-  <link rel="canonical" href="http://jazahn.github.io/A11yGoat/examples/label.html">
+  <link rel="canonical" href="http://jazahn.github.io/A11yGoat/examples/nontext_fixed.html">
   <link rel="alternate" type="application/rss+xml" title="A11yGoat" href="http://jazahn.github.io/A11yGoat/feed.xml" />
   <!-- Bootstrap core CSS -->
   <link href="/A11yGoat/css/bootstrap.min.css" rel="stylesheet">
@@ -82,17 +82,6 @@
     <div class="page-content">
       <div class="wrapper">
         
-<div class="row">
-    <div class="well">
-        <p>This is an example of a form that has not linked the input elements to labels. When a screen reader runs through these, sometimes they are able to get a feel for what text box goes with what text, but it’s annoying. They have to click back and forth between the text and the box.</p>
-
-<p>To get a better feel, it’s important to <code>label</code> the inputs.<br />
- * <a href="http://www.w3schools.com/tags/tag_label.asp">how to use labels</a><br />
- * <a href="http://www.w3.org/TR/WCAG20-TECHS/H44.html">read more on w3.org</a></p>
-
-    </div>
-</div>
-
 
 <div class="example">
 
@@ -102,90 +91,42 @@
     </header>
 
     <article class="example-content">
-        <form class="form-horizontal">
-    <div class="form-group">
-        <div class="col-sm-3 control-label">Email</div>
-        <div class="col-sm-9">
-            <input type="email" class="form-control" id="email" placeholder="Email">
-        </div>
+        <div class="row">
+    <div class="col-sm-12">
+        <ul class="list-unstyled">
+    <li class="well">
+        <img src="/A11yGoat/img/why-not-zoidberg.jpg" alt="Need an image? Why not Zoidberg?">
+    </li>
+    <li class="well">
+        <img src="/A11yGoat/img/why-not-zoidberg.jpg" alt=""><br>
+        <strong>Need an image? Why not Zoidberg?</strong>
+    </li>
+    <li class="well">
+        <abbr title="person flipping table">(╯°□°）╯︵ ┻━┻</abbr>  <abbr title="person putting flipped table back">┬─┬ノ( º _ ºノ)</abbr>
+    </li>
+    <li>
+        <abbr title="lorem ipsum text"><img style="float: left;" src="/A11yGoat/img/L.jpeg" alt="">orem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin sed dolor in volutpat. Sed eu bibendum turpis. Quisque cursus mauris non dolor consectetur molestie. Ut placerat metus eget orci condimentum, vel sollicitudin ante porttitor. Integer a dictum ligula. Donec posuere mollis mattis. Maecenas id lectus convallis, volutpat velit et, pharetra ex. Etiam finibus lorem non sapien volutpat, non posuere lacus commodo. Pellentesque vehicula vestibulum augue, in lacinia tellus laoreet nec.</abbr>
+    </li>
+</ul>
     </div>
-    <div class="form-group">
-        <div class="col-sm-3 control-label">Password</div>
-        <div class="col-sm-9">
-            <input type="password" class="form-control" id="password" placeholder="Password">
-        </div>
+    <div class="col-sm-12">
+        <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;list-unstyled&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;well&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;/A11yGoat/img/why-not-zoidberg.jpg&quot;</span> <span class="na">alt=</span><span class="s">&quot;Need an image? Why not Zoidberg?&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;well&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;/A11yGoat/img/why-not-zoidberg.jpg&quot;</span> <span class="na">alt=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;&lt;br&gt;</span>
+        <span class="nt">&lt;strong&gt;</span>Need an image? Why not Zoidberg?<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;well&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">&quot;person flipping table&quot;</span><span class="nt">&gt;</span>(╯°□°）╯︵ ┻━┻<span class="nt">&lt;/abbr&gt;</span>  <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">&quot;person putting flipped table back&quot;</span><span class="nt">&gt;</span>┬─┬ノ( º _ ºノ)<span class="nt">&lt;/abbr&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">&quot;lorem ipsum text&quot;</span><span class="nt">&gt;&lt;img</span> <span class="na">style=</span><span class="s">&quot;float: left;&quot;</span> <span class="na">src=</span><span class="s">&quot;/A11yGoat/img/L.jpeg&quot;</span> <span class="na">alt=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin sed dolor in volutpat. Sed eu bibendum turpis. Quisque cursus mauris non dolor consectetur molestie. Ut placerat metus eget orci condimentum, vel sollicitudin ante porttitor. Integer a dictum ligula. Donec posuere mollis mattis. Maecenas id lectus convallis, volutpat velit et, pharetra ex. Etiam finibus lorem non sapien volutpat, non posuere lacus commodo. Pellentesque vehicula vestibulum augue, in lacinia tellus laoreet nec.<span class="nt">&lt;/abbr&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
     </div>
-    <div class="form-group">
-        <div class="col-sm-3 control-label">State</div>
-        <div class="col-sm-9">
-            <select id="states" class="form-control">
-                <option value="AL">Alabama</option>
-                <option value="AK">Alaska</option>
-                <option value="AZ">Arizona</option>
-                <option value="AR">Arkansas</option>
-                <option value="CA">California</option>
-                <option value="CO">Colorado</option>
-                <option value="CT">Connecticut</option>
-                <option value="DE">Delaware</option>
-                <option value="DC">District Of Columbia</option>
-                <option value="FL">Florida</option>
-                <option value="GA">Georgia</option>
-                <option value="HI">Hawaii</option>
-                <option value="ID">Idaho</option>
-                <option value="IL">Illinois</option>
-                <option value="IN">Indiana</option>
-                <option value="IA">Iowa</option>
-                <option value="KS">Kansas</option>
-                <option value="KY">Kentucky</option>
-                <option value="LA">Louisiana</option>
-                <option value="ME">Maine</option>
-                <option value="MD">Maryland</option>
-                <option value="MA">Massachusetts</option>
-                <option value="MI">Michigan</option>
-                <option value="MN">Minnesota</option>
-                <option value="MS">Mississippi</option>
-                <option value="MO">Missouri</option>
-                <option value="MT">Montana</option>
-                <option value="NE">Nebraska</option>
-                <option value="NV">Nevada</option>
-                <option value="NH">New Hampshire</option>
-                <option value="NJ">New Jersey</option>
-                <option value="NM">New Mexico</option>
-                <option value="NY">New York</option>
-                <option value="NC">North Carolina</option>
-                <option value="ND">North Dakota</option>
-                <option value="OH">Ohio</option>
-                <option value="OK">Oklahoma</option>
-                <option value="OR">Oregon</option>
-                <option value="PA">Pennsylvania</option>
-                <option value="RI">Rhode Island</option>
-                <option value="SC">South Carolina</option>
-                <option value="SD">South Dakota</option>
-                <option value="TN">Tennessee</option>
-                <option value="TX">Texas</option>
-                <option value="UT">Utah</option>
-                <option value="VT">Vermont</option>
-                <option value="VA">Virginia</option>
-                <option value="WA">Washington</option>
-                <option value="WV">West Virginia</option>
-                <option value="WI">Wisconsin</option>
-                <option value="WY">Wyoming</option>
-            </select>
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-9">
-            <div class="checkbox">
-                <input type="checkbox" id="rememberme"> Remember me
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-9">
-            <button type="submit" class="btn btn-default">Sign in</button>
-        </div>
-    </div>
-</form>
+</div>
     </article>
 
 

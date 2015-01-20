@@ -62,10 +62,6 @@
       <div class="trigger">
         
           
-          <a class="page-link" href="/A11yGoat/about/">About</a>
-          
-        
-          
         
           
         
@@ -85,30 +81,34 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="post">
+        
 
-    <header class="post-header">
-        <h1 class="post-title"></h1>
-        <p class="post-meta"></p>
+<div class="example">
+
+    <header class="example-header">
+        <h1 class="example-title"></h1>
+        <p class="example-meta"></p>
     </header>
 
-    <article class="post-content">
+    <article class="example-content">
+        <div class="row">
+    <div class="col-sm-12">
         <form class="form-horizontal">
     <div class="form-group">
-        <label for="email" class="col-sm-2 control-label">Email</label>
-        <div class="col-sm-10">
+        <label for="email" class="col-sm-3 control-label">Email</label>
+        <div class="col-sm-9">
             <input type="email" class="form-control" id="email" placeholder="Email">
         </div>
     </div>
     <div class="form-group">
-        <label for="password" class="col-sm-2 control-label">Password</label>
-        <div class="col-sm-10">
+        <label for="password" class="col-sm-3 control-label">Password</label>
+        <div class="col-sm-9">
             <input type="password" class="form-control" id="password" placeholder="Password">
         </div>
     </div>
     <div class="form-group">
-        <label for="states" class="col-sm-2 control-label">Select your state</label>
-        <div class="col-sm-10">
+        <label for="states" class="col-sm-3 control-label">State</label>
+        <div class="col-sm-9">
             <select id="states" class="form-control">
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -165,7 +165,7 @@
         </div>
     </div>
     <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
+        <div class="col-sm-offset-3 col-sm-9">
             <div class="checkbox">
                 <label>
                     <input type="checkbox" id="rememberme"> <label for="rememberme">Remember me</label>
@@ -174,12 +174,101 @@
         </div>
     </div>
     <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
+        <div class="col-sm-offset-3 col-sm-9">
             <button type="submit" class="btn btn-default">Sign in</button>
         </div>
     </div>
-
 </form>
+    </div>
+    <div class="col-sm-12">
+        <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;form-horizontal&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;email&quot;</span> <span class="na">class=</span><span class="s">&quot;col-sm-3 control-label&quot;</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-9&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;email&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id=</span><span class="s">&quot;email&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Email&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;password&quot;</span> <span class="na">class=</span><span class="s">&quot;col-sm-3 control-label&quot;</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-9&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;password&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id=</span><span class="s">&quot;password&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Password&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;states&quot;</span> <span class="na">class=</span><span class="s">&quot;col-sm-3 control-label&quot;</span><span class="nt">&gt;</span>State<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-9&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&quot;states&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;AL&quot;</span><span class="nt">&gt;</span>Alabama<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;AK&quot;</span><span class="nt">&gt;</span>Alaska<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;AZ&quot;</span><span class="nt">&gt;</span>Arizona<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;AR&quot;</span><span class="nt">&gt;</span>Arkansas<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;CA&quot;</span><span class="nt">&gt;</span>California<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;CO&quot;</span><span class="nt">&gt;</span>Colorado<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;CT&quot;</span><span class="nt">&gt;</span>Connecticut<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;DE&quot;</span><span class="nt">&gt;</span>Delaware<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;DC&quot;</span><span class="nt">&gt;</span>District Of Columbia<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;FL&quot;</span><span class="nt">&gt;</span>Florida<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;GA&quot;</span><span class="nt">&gt;</span>Georgia<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;HI&quot;</span><span class="nt">&gt;</span>Hawaii<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;ID&quot;</span><span class="nt">&gt;</span>Idaho<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;IL&quot;</span><span class="nt">&gt;</span>Illinois<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;IN&quot;</span><span class="nt">&gt;</span>Indiana<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;IA&quot;</span><span class="nt">&gt;</span>Iowa<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;KS&quot;</span><span class="nt">&gt;</span>Kansas<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;KY&quot;</span><span class="nt">&gt;</span>Kentucky<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;LA&quot;</span><span class="nt">&gt;</span>Louisiana<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;ME&quot;</span><span class="nt">&gt;</span>Maine<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;MD&quot;</span><span class="nt">&gt;</span>Maryland<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;MA&quot;</span><span class="nt">&gt;</span>Massachusetts<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;MI&quot;</span><span class="nt">&gt;</span>Michigan<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;MN&quot;</span><span class="nt">&gt;</span>Minnesota<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;MS&quot;</span><span class="nt">&gt;</span>Mississippi<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;MO&quot;</span><span class="nt">&gt;</span>Missouri<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;MT&quot;</span><span class="nt">&gt;</span>Montana<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;NE&quot;</span><span class="nt">&gt;</span>Nebraska<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;NV&quot;</span><span class="nt">&gt;</span>Nevada<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;NH&quot;</span><span class="nt">&gt;</span>New Hampshire<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;NJ&quot;</span><span class="nt">&gt;</span>New Jersey<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;NM&quot;</span><span class="nt">&gt;</span>New Mexico<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;NY&quot;</span><span class="nt">&gt;</span>New York<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;NC&quot;</span><span class="nt">&gt;</span>North Carolina<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;ND&quot;</span><span class="nt">&gt;</span>North Dakota<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;OH&quot;</span><span class="nt">&gt;</span>Ohio<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;OK&quot;</span><span class="nt">&gt;</span>Oklahoma<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;OR&quot;</span><span class="nt">&gt;</span>Oregon<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;PA&quot;</span><span class="nt">&gt;</span>Pennsylvania<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;RI&quot;</span><span class="nt">&gt;</span>Rhode Island<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;SC&quot;</span><span class="nt">&gt;</span>South Carolina<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;SD&quot;</span><span class="nt">&gt;</span>South Dakota<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;TN&quot;</span><span class="nt">&gt;</span>Tennessee<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;TX&quot;</span><span class="nt">&gt;</span>Texas<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;UT&quot;</span><span class="nt">&gt;</span>Utah<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;VT&quot;</span><span class="nt">&gt;</span>Vermont<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;VA&quot;</span><span class="nt">&gt;</span>Virginia<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;WA&quot;</span><span class="nt">&gt;</span>Washington<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;WV&quot;</span><span class="nt">&gt;</span>West Virginia<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;WI&quot;</span><span class="nt">&gt;</span>Wisconsin<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;WY&quot;</span><span class="nt">&gt;</span>Wyoming<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;/select&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-offset-3 col-sm-9&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id=</span><span class="s">&quot;rememberme&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;rememberme&quot;</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-offset-3 col-sm-9&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+    </div>
+</div>
     </article>
 
 

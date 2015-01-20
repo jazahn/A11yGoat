@@ -4,23 +4,28 @@ title: Input Elements
 relatesto: 1.1.1
 description: Input elements require label tags. As per WCAG 2.0 1.1.1 - "If non-text content is a control or accepts user input, then it has a name that describes its purpose."
 accessible: false
+explanation: "This is an example of a form that has not linked the input elements to labels. When a screen reader runs through these, sometimes they are able to get a feel for what text box goes with what text, but it's annoying. They have to click back and forth between the text and the box.\n
+\n
+To get a better feel, it's important to `label` the inputs.\n
+* [how to use labels](http://www.w3schools.com/tags/tag_label.asp)\n
+* [read more on w3.org](http://www.w3.org/TR/WCAG20-TECHS/H44.html)"
 ---
 <form class="form-horizontal">
     <div class="form-group">
-        <div class="col-sm-2 control-label">Email</div>
-        <div class="col-sm-10">
+        <div class="col-sm-3 control-label">Email</div>
+        <div class="col-sm-9">
             <input type="email" class="form-control" id="email" placeholder="Email">
         </div>
     </div>
     <div class="form-group">
-        <div class="col-sm-2 control-label">Password</div>
-        <div class="col-sm-10">
+        <div class="col-sm-3 control-label">Password</div>
+        <div class="col-sm-9">
             <input type="password" class="form-control" id="password" placeholder="Password">
         </div>
     </div>
     <div class="form-group">
-        <div class="col-sm-2 control-label">Select your state</div>
-        <div class="col-sm-10">
+        <div class="col-sm-3 control-label">State</div>
+        <div class="col-sm-9">
             <select id="states" class="form-control">
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -77,14 +82,14 @@ accessible: false
         </div>
     </div>
     <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
+        <div class="col-sm-offset-3 col-sm-9">
             <div class="checkbox">
                 <input type="checkbox" id="rememberme"> Remember me
             </div>
         </div>
     </div>
     <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
+        <div class="col-sm-offset-3 col-sm-9">
             <button type="submit" class="btn btn-default">Sign in</button>
         </div>
     </div>
