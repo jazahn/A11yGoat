@@ -4,7 +4,8 @@ title: Perceivable
 description:
 ---
 <div class="row">
-    {% for example in site.examples %}
+    {% assign sorted_examples = site.examples | sort:"relatesto" %}
+    {% for example in sorted_examples %}
     {% if example.accessible == false %}
     <div class="col-lg-4">
         <svg height="140" width="140">
@@ -19,19 +20,4 @@ description:
     {% endif %}
     {% endfor %}
 
-    <div class="col-lg-4">
-        <svg height="140" width="140">
-            <circle cx="70" cy="70" r="68" stroke="grey" stroke-width="3" fill="grey" />
-            <text x="40" y="75" fill="white" style="font-size: 2em;">1.2.2</text>
-        </svg>
-        <h2>Captions</h2>
-        <p>Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such.
-            <br><br>While, as developers, we cannot ensure captions exist, we can do 2 things.
-        <ol>
-            <li>Say something if you find yourself working on non-captioned material.</li>
-            <li>Make sure you know how to add captions.</li>
-        </ol>
-        </p>
-        <p><a class="btn btn-default" href="#" role="button">View page &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
 </div><!-- /.row -->
