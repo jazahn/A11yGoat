@@ -17,7 +17,21 @@ layout: default
     </header>
 
     <article class="example-content">
-        {{ content }}
+        <div role="tabpanel">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#display" id="display-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Display</a></li>
+                <li role="presentation" class=""><a href="#code" role="tab" id="code-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Code</a></li>
+                </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active in" id="display" aria-labelledby="display-tab">
+                    {{ content }}
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="code" aria-labelledby="code-tab">
+                </div>
+            </div>
+        </div>
+
     </article>
 
 
@@ -27,6 +41,26 @@ layout: default
         </div>
     </div>
     <script>
+        // CodeMirror
+        var code = document.getElementById('code');
+        var cm = CodeMirror(code, {
+            lineNumbers: true,
+            value: $('#display').html(),
+            mode: "htmlmixed"
+        });
+
+        //$('#code').on('keyup', function(){
+        //    $('#display').html(cm.doc.getValue());
+        //});
+        $('#display-tab').click(function(){
+            $('#display').html(cm.doc.getValue());
+        });
+        $('#code-tab').on('shown.bs.tab',
+        function() {
+            cm.refresh();
+        });
+        ////////////////
+
         $('#switch_button').on('click', function(){
             path = location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1);
             filename = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
