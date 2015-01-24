@@ -15,6 +15,12 @@
   <link rel="alternate" type="application/rss+xml" title="A11yGoat" href="http://jazahn.github.io/A11yGoat/feed.xml" />
   <!-- Bootstrap core CSS -->
   <link href="/A11yGoat/css/bootstrap.min.css" rel="stylesheet">
+  <script src="/A11yGoat/codemirror/lib/codemirror.js"></script>
+  <link rel="stylesheet" href="/A11yGoat/codemirror/lib/codemirror.css">
+  <script src="/A11yGoat/codemirror/mode/javascript/javascript.js"></script>
+  <script src="/A11yGoat/codemirror/mode/xml/xml.js"></script>
+  <script src="/A11yGoat/codemirror/mode/css/css.js"></script>
+  <script src="/A11yGoat/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -91,7 +97,15 @@
     </header>
 
     <article class="example-content">
-        <div class="row">
+        <div role="tabpanel">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#display" id="display-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Display</a></li>
+                <li role="presentation" class=""><a href="#code" role="tab" id="code-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Code</a></li>
+                </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active in" id="display" aria-labelledby="display-tab">
+                    <div class="row">
     <div class="col-sm-12">
         <video controls="" class="trackSupported">
     <source src="/A11yGoat/video/developerStories-en.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
@@ -105,6 +119,12 @@
 <span class="nt">&lt;/video&gt;</span></code></pre></div>
     </div>
 </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="code" aria-labelledby="code-tab">
+                </div>
+            </div>
+        </div>
+
     </article>
 
 
@@ -114,6 +134,26 @@
         </div>
     </div>
     <script>
+        // CodeMirror
+        var code = document.getElementById('code');
+        var cm = CodeMirror(code, {
+            lineNumbers: true,
+            value: $('#display').html(),
+            mode: "htmlmixed"
+        });
+
+        //$('#code').on('keyup', function(){
+        //    $('#display').html(cm.doc.getValue());
+        //});
+        $('#display-tab').click(function(){
+            $('#display').html(cm.doc.getValue());
+        });
+        $('#code-tab').on('shown.bs.tab',
+        function() {
+            cm.refresh();
+        });
+        ////////////////
+
         $('#switch_button').on('click', function(){
             path = location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1);
             filename = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);

@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Captions</title>
+  <title>Color</title>
   <meta name="description" content="A11yGoat is an attempt to create a site that contains common accessibility flaws with the purpose of teaching how to fix them. This is an open source project with no affiliation with any company or institution.
 ">
 
   <link rel="stylesheet" href="/A11yGoat/css/main.css">
-  <link rel="canonical" href="http://jazahn.github.io/A11yGoat/examples/captions.html">
+  <link rel="canonical" href="http://jazahn.github.io/A11yGoat/examples/color.html">
   <link rel="alternate" type="application/rss+xml" title="A11yGoat" href="http://jazahn.github.io/A11yGoat/feed.xml" />
   <!-- Bootstrap core CSS -->
   <link href="/A11yGoat/css/bootstrap.min.css" rel="stylesheet">
@@ -90,13 +90,9 @@
         
 <div class="row">
     <div class="well">
-        <p>While the burden of captioning rests <em>mostly</em> on the shoulders of the content creator, as a developer, we need to know how to deal with captions. This is a normal HTML5 video tag with a random video.</p>
-
-<ul>
-  <li>Take a look at <a href="/A11yGoat/video/developerStories-subtitles-en.vtt">the WEBVTT file</a></li>
-  <li><a href="http://www.3playmedia.com/how-it-works/how-to-guides/html5-video-captioning/">How HTML5 Captioning Works</a></li>
-  <li>Note that the track element cannot be used from a <code>file://</code> URL. To see tracks in action, put files on a web server.</li>
-</ul>
+        <p>This is not normally a problem except in cases where the colors convey important information. Under these circumstances you will need to either change the graphic or provide an additional means of obtaining the same information. Oftentimes the most appropriate way to do this is to provide an explanation in the text itself.<br />
+In general, avoid the following: * Red and black are bad. * Red and green are bad.<br />
+Color contrast checkers are one of the few automatic auditing tools that work well. Make use of Chrome’s Accessibility Developer Tools to check the page for color contrast issues. * <a href="Accessibility Developer Tools - Chrome Web Store - Google">Chrome’s Accessibility Developer Tools</a> </p>
 
     </div>
 </div>
@@ -118,9 +114,9 @@
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div role="tabpanel" class="tab-pane fade active in" id="display" aria-labelledby="display-tab">
-                    <video controls="" class="trackSupported">
-    <source src="/A11yGoat/video/developerStories-en.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
-</video>
+                    <ul class="list-unstyled">
+    <li class="well">
+
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="code" aria-labelledby="code-tab">
                 </div>
