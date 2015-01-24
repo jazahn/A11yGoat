@@ -9,6 +9,8 @@ description:
     {% if example.accessible == false %}
     <div class="col-lg-4">
         <svg height="140" width="140">
+            <title>{{ example.relatesto }}</title>
+            <desc>This relates to section {{ example.relatesto }} of WCAG 2.0.</desc>
             <circle cx="70" cy="70" r="68" stroke="grey" stroke-width="3" fill="grey" />
             <text x="40" y="75" fill="white" style="font-size: 2em;">{{ example.relatesto }}</text>
         </svg>
