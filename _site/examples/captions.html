@@ -112,16 +112,14 @@
     <article class="example-content">
         <div role="tabpanel">
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#display" id="display-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Display</a></li>
-                <li role="presentation" class=""><a href="#code" role="tab" id="code-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Code</a></li>
+                <li role="presentation" class="active"><a href="#display" id="display-tab" role="tab" data-toggle="tab" aria-controls="display" aria-expanded="true">Display</a></li>
+                <li role="presentation" class=""><a href="#code" role="tab" id="code-tab" data-toggle="tab" aria-controls="code" aria-expanded="false">Code</a></li>
                 </li>
             </ul>
-            <div id="myTabContent" class="tab-content">
-                <div role="tabpanel" class="tab-pane fade active in" id="display" aria-labelledby="display-tab">
-                    <video controls="" class="trackSupported">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active in" id="display" aria-labelledby="display-tab"><video controls="" class="trackSupported">
     <source src="/A11yGoat/video/developerStories-en.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
-</video>
-                </div>
+</video></div>
                 <div role="tabpanel" class="tab-pane fade" id="code" aria-labelledby="code-tab">
                 </div>
             </div>
@@ -132,27 +130,48 @@
 
     <div style="width: 100%">
         <div class="" align="center">
+            <button class="btn btn-default" type="button" id="reset">reset</button>
             <button class="btn btn-default" type="button" id="switch_button">switch</button>
         </div>
     </div>
     <script>
         // CodeMirror
+        // init saves
+        var saves = {};
+        if(localStorage.getItem('saves') != null) {
+            saves = JSON.parse(localStorage.getItem('saves'));
+        }
+        // load
+        var url = window.location.pathname;
+        var filename = url.substring(url.lastIndexOf('/')+1);
+        filename = filename.substring(0, filename.indexOf('.'));
+        var initialValue = $('#display').html();
+        if(saves[filename] != undefined){
+            initialValue = saves[filename];
+        }
         var code = document.getElementById('code');
         var cm = CodeMirror(code, {
             lineNumbers: true,
-            value: $('#display').html(),
+            value: initialValue,
             mode: "htmlmixed"
         });
+        $('#display').html(cm.doc.getValue());
 
-        //$('#code').on('keyup', function(){
-        //    $('#display').html(cm.doc.getValue());
-        //});
         $('#display-tab').click(function(){
             $('#display').html(cm.doc.getValue());
         });
         $('#code-tab').on('shown.bs.tab',
         function() {
             cm.refresh();
+        });
+        $('#code').on('keyup', function(){
+            // save
+            saves[filename] = cm.doc.getValue();
+            localStorage.setItem('saves', JSON.stringify(saves));
+        });
+        $('#reset').click(function(){
+            saves[filename] = null;
+            localStorage.setItem('saves', JSON.stringify(saves));
         });
         ////////////////
 

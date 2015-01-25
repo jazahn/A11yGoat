@@ -487,3 +487,13 @@ pre {
     @media screen and (max-width: 800px) {
       .example-content h4 {
         font-size: 18px; } }
+
+.tab-content {
+  margin-top: 1em;
+  padding: 1em; }
+
+#code {
+  border: 1px solid lightgrey;
+  position: absolute;
+  left: 10%;
+  right: 10%; }

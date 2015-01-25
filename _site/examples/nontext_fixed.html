@@ -99,49 +99,29 @@
     <article class="example-content">
         <div role="tabpanel">
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#display" id="display-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Display</a></li>
-                <li role="presentation" class=""><a href="#code" role="tab" id="code-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Code</a></li>
+                <li role="presentation" class="active"><a href="#display" id="display-tab" role="tab" data-toggle="tab" aria-controls="display" aria-expanded="true">Display</a></li>
+                <li role="presentation" class=""><a href="#code" role="tab" id="code-tab" data-toggle="tab" aria-controls="code" aria-expanded="false">Code</a></li>
                 </li>
             </ul>
-            <div id="myTabContent" class="tab-content">
-                <div role="tabpanel" class="tab-pane fade active in" id="display" aria-labelledby="display-tab">
-                    <div class="row">
-    <div class="col-sm-12">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active in" id="display" aria-labelledby="display-tab"><ul class="list-unstyled">
+    <li class="well">
+        <img src="/A11yGoat/img/lincoln.jpeg" alt="Abraham Lincoln">
+    </li>
+    <li class="well">
+        <img src="/A11yGoat/img/lincoln.jpeg" alt=""><br>
+        <strong>Abraham Lincoln</strong>
+    </li>
+    <li class="well">
         <ul class="list-unstyled">
-    <li class="well">
-        <img src="/A11yGoat/img/why-not-zoidberg.jpg" alt="Need an image? Why not Zoidberg?">
-    </li>
-    <li class="well">
-        <img src="/A11yGoat/img/why-not-zoidberg.jpg" alt=""><br>
-        <strong>Need an image? Why not Zoidberg?</strong>
-    </li>
-    <li class="well">
-        <abbr title="person flipping table">(╯°□°）╯︵ ┻━┻</abbr>  <abbr title="person putting flipped table back">┬─┬ノ( º _ ºノ)</abbr>
+            <li><abbr title="person flipping table">(╯°□°）╯︵ ┻━┻</abbr></li>
+            <li><abbr title="person putting flipped table back">┬─┬ノ( º _ ºノ)</abbr></li>
+        </ul>
     </li>
     <li>
-        <abbr title="lorem ipsum text"><img style="float: left;" src="/A11yGoat/img/L.jpeg" alt="">orem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin sed dolor in volutpat. Sed eu bibendum turpis. Quisque cursus mauris non dolor consectetur molestie. Ut placerat metus eget orci condimentum, vel sollicitudin ante porttitor. Integer a dictum ligula. Donec posuere mollis mattis. Maecenas id lectus convallis, volutpat velit et, pharetra ex. Etiam finibus lorem non sapien volutpat, non posuere lacus commodo. Pellentesque vehicula vestibulum augue, in lacinia tellus laoreet nec.</abbr>
+        <abbr title="lorem ipsum text"><img style="float: left;" width="100" height="100" src="/A11yGoat/img/L.png" alt="">orem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin sed dolor in volutpat. Sed eu bibendum turpis. Quisque cursus mauris non dolor consectetur molestie. Ut placerat metus eget orci condimentum, vel sollicitudin ante porttitor. Integer a dictum ligula. Donec posuere mollis mattis. Maecenas id lectus convallis, volutpat velit et, pharetra ex. Etiam finibus lorem non sapien volutpat, non posuere lacus commodo. Pellentesque vehicula vestibulum augue, in lacinia tellus laoreet nec.</abbr>
     </li>
-</ul>
-    </div>
-    <div class="col-sm-12">
-        <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;list-unstyled&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;well&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;/A11yGoat/img/why-not-zoidberg.jpg&quot;</span> <span class="na">alt=</span><span class="s">&quot;Need an image? Why not Zoidberg?&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;well&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;/A11yGoat/img/why-not-zoidberg.jpg&quot;</span> <span class="na">alt=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;&lt;br&gt;</span>
-        <span class="nt">&lt;strong&gt;</span>Need an image? Why not Zoidberg?<span class="nt">&lt;/strong&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;well&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">&quot;person flipping table&quot;</span><span class="nt">&gt;</span>(╯°□°）╯︵ ┻━┻<span class="nt">&lt;/abbr&gt;</span>  <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">&quot;person putting flipped table back&quot;</span><span class="nt">&gt;</span>┬─┬ノ( º _ ºノ)<span class="nt">&lt;/abbr&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>
-        <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">&quot;lorem ipsum text&quot;</span><span class="nt">&gt;&lt;img</span> <span class="na">style=</span><span class="s">&quot;float: left;&quot;</span> <span class="na">src=</span><span class="s">&quot;/A11yGoat/img/L.jpeg&quot;</span> <span class="na">alt=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin sed dolor in volutpat. Sed eu bibendum turpis. Quisque cursus mauris non dolor consectetur molestie. Ut placerat metus eget orci condimentum, vel sollicitudin ante porttitor. Integer a dictum ligula. Donec posuere mollis mattis. Maecenas id lectus convallis, volutpat velit et, pharetra ex. Etiam finibus lorem non sapien volutpat, non posuere lacus commodo. Pellentesque vehicula vestibulum augue, in lacinia tellus laoreet nec.<span class="nt">&lt;/abbr&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span></code></pre></div>
-    </div>
-</div>
-                </div>
+</ul></div>
                 <div role="tabpanel" class="tab-pane fade" id="code" aria-labelledby="code-tab">
                 </div>
             </div>
@@ -152,27 +132,48 @@
 
     <div style="width: 100%">
         <div class="" align="center">
+            <button class="btn btn-default" type="button" id="reset">reset</button>
             <button class="btn btn-default" type="button" id="switch_button">switch</button>
         </div>
     </div>
     <script>
         // CodeMirror
+        // init saves
+        var saves = {};
+        if(localStorage.getItem('saves') != null) {
+            saves = JSON.parse(localStorage.getItem('saves'));
+        }
+        // load
+        var url = window.location.pathname;
+        var filename = url.substring(url.lastIndexOf('/')+1);
+        filename = filename.substring(0, filename.indexOf('.'));
+        var initialValue = $('#display').html();
+        if(saves[filename] != undefined){
+            initialValue = saves[filename];
+        }
         var code = document.getElementById('code');
         var cm = CodeMirror(code, {
             lineNumbers: true,
-            value: $('#display').html(),
+            value: initialValue,
             mode: "htmlmixed"
         });
+        $('#display').html(cm.doc.getValue());
 
-        //$('#code').on('keyup', function(){
-        //    $('#display').html(cm.doc.getValue());
-        //});
         $('#display-tab').click(function(){
             $('#display').html(cm.doc.getValue());
         });
         $('#code-tab').on('shown.bs.tab',
         function() {
             cm.refresh();
+        });
+        $('#code').on('keyup', function(){
+            // save
+            saves[filename] = cm.doc.getValue();
+            localStorage.setItem('saves', JSON.stringify(saves));
+        });
+        $('#reset').click(function(){
+            saves[filename] = null;
+            localStorage.setItem('saves', JSON.stringify(saves));
         });
         ////////////////
 
