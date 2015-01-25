@@ -12,10 +12,7 @@ This I'm borrowing from the [WebGoat](https://www.owasp.org/index.php/Category:O
 
 
 ## How to Run
-While you can view it freely on the [github public site](http://jazahn.github.io/A11yGoat/), the intention is for developers to download the code so you can get into the inaccessible files and make changes. It is built with [Jekyll](http://jekyllrb.com/) so that you can simply work with the compiled html version in [_site](https://github.com/jazahn/A11yGoat/tree/gh-pages/_site) without having to deal with any kind of backend. It is
-
-
-There is no need for a backend language, however, it's not going to run *well* if it's just run from a *file://* so I would recommend something like [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/) or [npm's http-server](https://www.npmjs.com/package/http-server).
+You can view and use it freely on the [github public site](http://jazahn.github.io/A11yGoat/). Coding exercises are inline and completable in the static version there. 
 
 ## How to Contribute
 * As an accesisbility professional
@@ -23,5 +20,5 @@ There is no need for a backend language, however, it's not going to run *well* i
   Please feel free to browse the [public site](http://jazahn.github.io/A11yGoat/) and if you have suggestions or can think of things to add, add them via the [issue tracker](https://github.com/jazahn/A11yGoat/issues)
 * As a developer:
 
-  You can make an issue or pull request. We are still early in the project life, so if you've got a better way to do templating (that doesn't involve a server side), or you think they layout would look better with something that effects all pages, please file an issue first so we can discuss.
+  A11yGoat is built with [Jekyll](http://jekyllrb.com/) so that the code for the exercises is modularized and hopefully, easy to add to, without having to deal with any kind of backend. You can make an issue or pull request. We are still early in the project life, so if you've got a better way to do templating (that doesn't involve a server side), or you think they layout would look better with something that effects all pages, please file an issue first so we can discuss.
   

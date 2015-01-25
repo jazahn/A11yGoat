@@ -93,9 +93,11 @@
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <!--
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
     <li data-target="#myCarousel" data-slide-to="3"></li>
+    -->
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
@@ -108,6 +110,7 @@
         </div>
       </div>
     </div>
+    <!--
     <div class="item">
       <img src="data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Operable">
       <div class="container">
@@ -138,6 +141,7 @@
         </div>
       </div>
     </div>
+    -->
   </div>
   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -167,9 +171,7 @@
 <p>This I’m borrowing from the <a href="https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project">WebGoat</a> project, which is an open source project that provides a purposely <strong>insecure</strong> site to help teach web security. The “goat”, as they explain,  comes from the word scapegoat. They’re intention is that “developers should not feel bad about knowing <strong>__</strong>_” … “so blame it on the ‘goat.” I don’t think I fully understand that sentiment, but since the inspiration came from WebGoat, A11yGoat made sense.</p>
 
 <h2 id="how-to-run">How to Run</h2>
-<p>While you can view it freely on the <a href="http://jazahn.github.io/A11yGoat/">github public site</a>, the intention is for developers to download the code so you can get into the inaccessible files and make changes. It is built with <a href="http://jekyllrb.com/">Jekyll</a> so that you can simply work with the compiled html version in <a href="https://github.com/jazahn/A11yGoat/tree/gh-pages/_site">_site</a> without having to deal with any kind of backend. It is</p>
-
-<p>There is no need for a backend language, however, it’s not going to run <em>well</em> if it’s just run from a <em>file://</em> so I would recommend something like <a href="http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/">Python’s SimpleHTTPServer</a> or <a href="https://www.npmjs.com/package/http-server">npm’s http-server</a>.</p>
+<p>You can view and use it freely on the <a href="http://jazahn.github.io/A11yGoat/">github public site</a>. Coding exercises are inline and completable in the static version there. </p>
 
 <h2 id="how-to-contribute">How to Contribute</h2>
 <ul>
@@ -181,7 +183,7 @@
   <li>
     <p>As a developer:</p>
 
-    <p>You can make an issue or pull request. We are still early in the project life, so if you’ve got a better way to do templating (that doesn’t involve a server side), or you think they layout would look better with something that effects all pages, please file an issue first so we can discuss.</p>
+    <p>A11yGoat is built with <a href="http://jekyllrb.com/">Jekyll</a> so that the code for the exercises is modularized and hopefully, easy to add to, without having to deal with any kind of backend. You can make an issue or pull request. We are still early in the project life, so if you’ve got a better way to do templating (that doesn’t involve a server side), or you think they layout would look better with something that effects all pages, please file an issue first so we can discuss.</p>
   </li>
 </ul>
 
