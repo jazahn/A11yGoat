@@ -20,13 +20,16 @@ layout: default
         <div role="tabpanel">
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#display" id="display-tab" role="tab" data-toggle="tab" aria-controls="display" aria-expanded="true">Display</a></li>
-                <li role="presentation" class=""><a href="#code" role="tab" id="code-tab" data-toggle="tab" aria-controls="code" aria-expanded="false">Code</a></li>
+                <li role="presentation" class=""><a href="#code-outer" role="tab" id="code-tab" data-toggle="tab" aria-controls="code-outer" aria-expanded="false">Code</a></li>
                 </li>
             </ul>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade active in" id="display" aria-labelledby="display-tab">{{ content }}</div>
-                <div role="tabpanel" class="tab-pane fade" id="code" aria-labelledby="code-tab">
+                <div role="tabpanel" class="tab-pane fade" id="code-outer" aria-labelledby="code-tab">
+                    <div id="code"></div>
+                    <div id="code-prez"></div>
                 </div>
+                <div
             </div>
         </div>
 
