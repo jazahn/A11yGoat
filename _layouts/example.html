@@ -38,8 +38,8 @@ layout: default
 
     <div style="width: 100%">
         <div class="" align="center">
-            <button class="btn btn-default" type="button" id="reset">reset</button>
-            <button class="btn btn-default" type="button" id="switch_button">switch</button>
+            <button class="btn btn-default" type="button" id="reset" data-toggle="tooltip" title="Resets your saved data and reloads the page.">Reset Page</button>
+            <button class="btn btn-default" type="button" id="switch_button" data-toggle="tooltip" title="Switches between inaccessible and accessible versions.">Switch</button>
         </div>
     </div>
     <script>
@@ -80,6 +80,7 @@ layout: default
         $('#reset').click(function(){
             saves[filename] = null;
             localStorage.setItem('saves', JSON.stringify(saves));
+            location.reload();
         });
         ////////////////
 
