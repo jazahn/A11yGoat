@@ -4,7 +4,7 @@ title: Perceivable
 description:
 ---
 <div class="row">
-    {% assign sorted_examples = site.examples | sort:"relatesto" %}
+    {% assign sorted_examples = site.examples | sort:"relatesto" | where: "pour", "perceivable" %}
     {% for example in sorted_examples %}
     {% if example.accessible == false %}
     <div class="col-lg-4">
