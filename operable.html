@@ -1,0 +1,25 @@
+---
+layout: page
+title: Operable
+description:
+---
+<div class="row">
+    {% assign sorted_examples = site.examples | sort:"relatesto" | where: "pour", "operable" %}
+    {% for example in sorted_examples %}
+    {% if example.accessible == false %}
+    <div class="col-lg-4">
+        <svg height="140" width="140">
+            <title>{{ example.relatesto }}</title>
+            <desc>This relates to section {{ example.relatesto }} of WCAG 2.0.</desc>
+            <circle cx="70" cy="70" r="68" stroke="grey" stroke-width="3" fill="grey" />
+            <text x="40" y="75" fill="white" style="font-size: 2em;">{{ example.relatesto }}</text>
+        </svg>
+        <!-- <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;"> -->
+        <h2>{{ example.title }}</h2>
+        <p>{{ example.description }}</p>
+        <p><a class="btn btn-default" href="{{ example.url | prepend: site.baseurl }}" role="button">Inaccessible Example &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    {% endif %}
+    {% endfor %}
+
+</div><!-- /.row -->
