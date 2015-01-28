@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Perceivable
+title: Operable
 description:
 ---
 <div class="row">
-    {% assign sorted_examples = site.examples | sort:"relatesto" | where: "pour", "perceivable" %}
+    {% assign sorted_examples = site.examples | sort:"relatesto" | where: "pour", "operable" %}
     {% for example in sorted_examples %}
     {% if example.accessible == false %}
     <div class="col-lg-4">

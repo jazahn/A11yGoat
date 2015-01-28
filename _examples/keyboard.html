@@ -1,0 +1,50 @@
+---
+layout: example
+title: Keyboard
+pour: operable
+relatesto: 2.1.1
+description: "Keyboard Navigation"
+accessible: false
+explanation: "Keyboard Navigation is one of the most imporant accessibility hurdles. It effects blind, low vision, color impairment, and all ranges of motor impairments.\n\n
+
+Here we're going to do a couple of the more common mistakes made.\n
+ 1. A custom button, with no tabindex.
+ 2. A custom modal, with no tabindex and out of DOM order.
+
+ * [Read more at webaim.org](http://webaim.org/techniques/keyboard/)"
+---
+<ul class="list-unstyled">
+    <li class="well">
+        <p>
+            Click on this button:
+        </p>
+        <div class="btn btn-info"
+             onclick="alert('sent!')">
+            Send
+        </div>
+    </li>
+    <li class="well">
+        <div id="modal_dialog" class="dialog well">
+            <p>What?</p>
+            <div class="btn btn-info" onclick="closeModal()">I don't know.</div>
+        </div>
+        <div class="btn btn-info" onclick="confirm()">
+            Open Modal
+        </div>
+        <script>
+            function confirm() {
+                $('#modal_dialog').css('display', 'block');
+            }
+            function closeModal() {
+                $('#modal_dialog').css('display', 'none');
+            }
+        </script>
+        <style>
+            .dialog {
+                display: none;
+                position: fixed;
+                top: 2em;
+            }
+        </style>
+    </li>
+</ul>
