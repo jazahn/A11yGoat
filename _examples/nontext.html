@@ -9,24 +9,25 @@ accessible: false
 explanation: "Missing alt tags. Note that the alternative text needs to convey the purpose of the data, not necessarily describing it exactly. In general, adding alt descriptions to images is very easy. But different things need to be described in different ways. \n\n
 
 Below are 4 items\n
-1. An image that contains text.\n
-2. An image that has a text explanation of it under the image. It does not require a fully description.\n
-3. A non-image representation. This will need an [abbr](http://www.w3.org/TR/WCAG20-TECHS/H28.html) tag.\n
+1. An image that contains text following it.\n
+2. An image that has the text you would normally put in the `alt` under the image.\n
+3. A non-image representation. This will need an [aria-label](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) and it's semantically appropriate to use an [abbr](http://www.w3.org/TR/WCAG20-TECHS/H28.html) tag.\n
 4. An image that is functioning as the first letter of the text. And while we're at it, how do you deal with lipsum? Hint, see the example above.\n\n
 
 'Authors MAY, with caution, use aria-hidden to hide visibly rendered content from assistive technologies only if the act of hiding this content is intended to improve the experience for users of assistive technologies by removing redundant or extraneous content.'\n\n
 
 * [alttext](http://webaim.org/techniques/alttext/)\n
 * [aira-hidden](http://www.w3.org/TR/wai-aria/states_and_properties#aria-hidden)\n
-* [role='presentation'](http://www.w3.org/TR/wai-aria/roles#presentation)"
+* [Drop Caps](http://www.smashingmagazine.com/2012/04/03/drop-caps-historical-use-and-current-best-practices/)"
 ---
 <ul class="list-unstyled">
     <li class="well">
         <img src="{{ "/img/lincoln.jpeg" | prepend: site.baseurl }}" alt="">
+        <p>The 16th President of the United States, serving from March 1861 until his assassination in April 1865. Lincoln led the United States through its Civil War—its bloodiest war and its greatest moral, constitutional and political crisis.[1][2] In doing so, he preserved the Union, abolished slavery, strengthened the federal government, and modernized the economy.</p>
     </li>
     <li class="well">
         <img src="{{ "/img/lincoln.jpeg" | prepend: site.baseurl }}" alt=""><br>
-        <strong>Abraham Lincoln</strong>
+        <p><strong>Abraham Lincoln</strong>, the 16th President of the United States, serving from March 1861 until his assassination in April 1865. Lincoln led the United States through its Civil War—its bloodiest war and its greatest moral, constitutional and political crisis.[1][2] In doing so, he preserved the Union, abolished slavery, strengthened the federal government, and modernized the economy.</p>
     </li>
     <li class="well">
         <ul class="list-unstyled">

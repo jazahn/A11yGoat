@@ -8,19 +8,30 @@ accessible: true
 ---
 <ul class="list-unstyled">
     <li class="well">
-        <img src="{{ "/img/lincoln.jpeg" | prepend: site.baseurl }}" alt="Abraham Lincoln">
+        <figure>
+            <img src="{{ "/img/lincoln.jpeg" | prepend: site.baseurl }}" alt="Abraham Lincoln">
+            <figcaption>
+                <p>The 16th President of the United States, serving from March 1861 until his assassination in April 1865. Lincoln led the United States through its Civil War—its bloodiest war and its greatest moral, constitutional and political crisis.[1][2] In doing so, he preserved the Union, abolished slavery, strengthened the federal government, and modernized the economy.</p>
+            </figcaption>
+        </figure>
+
     </li>
     <li class="well">
         <img src="{{ "/img/lincoln.jpeg" | prepend: site.baseurl }}" alt=""><br>
-        <strong>Abraham Lincoln</strong>
+        <p><strong>Abraham Lincoln</strong>, the 16th President of the United States, serving from March 1861 until his assassination in April 1865. Lincoln led the United States through its Civil War—its bloodiest war and its greatest moral, constitutional and political crisis.[1][2] In doing so, he preserved the Union, abolished slavery, strengthened the federal government, and modernized the economy.</p>
     </li>
     <li class="well">
         <ul class="list-unstyled">
-            <li><abbr title="person flipping table">(╯°□°）╯︵ ┻━┻</abbr></li>
-            <li><abbr title="person putting flipped table back">┬─┬ノ( º _ ºノ)</abbr></li>
+            <li><abbr title="person flipping table" aria-label="person flipping table">(╯°□°）╯︵ ┻━┻</abbr></li>
+            <li><abbr title="person putting flipped table back" aria-label="person flipping table">┬─┬ノ( º _ ºノ)</abbr></li>
         </ul>
     </li>
     <li>
-        <abbr title="lorem ipsum text"><img style="float: left;" width="100" height="100" src="{{ "/img/L.png" | prepend: site.baseurl }}" alt="">orem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin sed dolor in volutpat. Sed eu bibendum turpis. Quisque cursus mauris non dolor consectetur molestie. Ut placerat metus eget orci condimentum, vel sollicitudin ante porttitor. Integer a dictum ligula. Donec posuere mollis mattis. Maecenas id lectus convallis, volutpat velit et, pharetra ex. Etiam finibus lorem non sapien volutpat, non posuere lacus commodo. Pellentesque vehicula vestibulum augue, in lacinia tellus laoreet nec.</abbr>
+        <style>
+            .dropChar {
+                font-size: 5em;
+            }
+        </style>
+        <abbr title="lorem ipsum text" aria-label="lorem ipsum text"><span class="dropChar">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin sed dolor in volutpat. Sed eu bibendum turpis. Quisque cursus mauris non dolor consectetur molestie. Ut placerat metus eget orci condimentum, vel sollicitudin ante porttitor. Integer a dictum ligula. Donec posuere mollis mattis. Maecenas id lectus convallis, volutpat velit et, pharetra ex. Etiam finibus lorem non sapien volutpat, non posuere lacus commodo. Pellentesque vehicula vestibulum augue, in lacinia tellus laoreet nec.</abbr>
     </li>
 </ul>
