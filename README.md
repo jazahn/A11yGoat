@@ -12,7 +12,7 @@ This I'm borrowing from the [WebGoat](https://www.owasp.org/index.php/Category:O
 
 
 ## How to Run
-You can view and use it freely on the [github public site](http://jazahn.github.io/A11yGoat/). Coding exercises are inline and completable in the static version there. 
+You can view and use it freely on the [github public site](http://jazahn.github.io/A11yGoat/). Coding exercises are inline and completable in the static version there.
 
 ## How to Contribute
 * As an accesisbility professional
