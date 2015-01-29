@@ -27,7 +27,7 @@ layout: default
                 <div role="tabpanel" class="tab-pane fade active in" id="display" aria-labelledby="display-tab">{{ content }}</div>
                 <div role="tabpanel" class="tab-pane fade" id="code-outer" aria-labelledby="code-tab">
                     <div id="code"></div>
-                    <div id="code-prez"></div>
+                    <div id="code-prez" role="presentation"></div>
                 </div>
                 <div
             </div>
@@ -38,8 +38,8 @@ layout: default
 
     <div style="width: 100%">
         <div class="" align="center">
-            <button class="btn btn-default" type="button" id="reset" data-toggle="tooltip" title="Resets your saved data and reloads the page.">Reset Page</button>
-            <button class="btn btn-default" type="button" id="switch_button" data-toggle="tooltip" title="Switches between inaccessible and accessible versions.">Switch</button>
+            <button class="btn btn-default" type="button" id="reset" data-toggle="tooltip" title="Resets your saved data and reloads the page.">Reset Page Save</button>
+            <button class="btn btn-default" type="button" id="switch_button" data-toggle="tooltip" title="Switches between inaccessible and accessible versions.">Switch to {% if page.accessible == true %}Inaccessible{% else %}Accessible{% endif %} Version</button>
         </div>
     </div>
     <script>
