@@ -1,0 +1,54 @@
+---
+layout: example
+title: Skip Navigation
+pour: operable
+accessible: true
+---
+<header role="banner">
+
+    <a id="skip-to-content" href="#content">skip to main content</a>
+
+    <h1>Site Name</h1>
+
+    <nav role="navigation">
+        <a href="#">Link1</a>
+        <a href="#">Link2</a>
+        <a href="#">Link3</a>
+        <a href="#">Link4</a>
+    </nav>
+
+</header>
+
+<main id="content" role="main" tabindex="0">
+
+    <article>
+        <h1>Main Content</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur <a href="http://jazahn.github.io/A11yGoat/">adipisicing</a> elit. Nisi aliquid repudiandae corrupti nam vel reiciendis nesciunt assumenda ea suscipit ducimus numquam dignissimos consequatur provident. Necessitatibus laboriosam commodi <a href="http://jazahn.github.io/A11yGoat/">reprehenderit dolores</a> eum molestiae quidem in possimus perferendis soluta? Nesciunt nam ad tempore debitis molestias deserunt explicabo obcaecati maxime impedit excepturi pariatur tenetur quisquam rerum odio similique. Rem tempora eveniet possimus repellat culpa voluptatibus porro ad quidem rerum doloremque obcaecati blanditiis fugiat provident perferendis inventore pariatur explicabo itaque illum aperiam nihil nulla labore repudiandae mollitia sint aspernatur nostrum impedit. Corporis accusantium natus sint eum ex saepe optio ab ratione ut placeat obcaecati iure. Repellendus iste fuga impedit perferendis architecto fugit deleniti fugiat magnam et quas facilis quis dolore harum aut nostrum dolorem accusamus perspiciatis nemo laboriosam quisquam. Ex voluptatibus beatae tempore tempora veritatis nobis porro commodi in non alias harum illo quos esse molestias assumenda ipsa quaerat sapiente nisi iste ea a aut odit accusantium repellat dolor perspiciatis eos recusandae officiis ducimus velit expedita deserunt at odio placeat corporis aliquid numquam quae libero dolores omnis! Dolor aliquam odio fugit quas id a accusantium animi veniam tempore blanditiis excepturi dolore? Quibusdam maxime voluptatem perferendis illum doloribus sapiente inventore aut repellat nulla earum excepturi obcaecati quas voluptatibus nostrum accusamus libero ab voluptate ratione voluptas quo fugit rerum dolores quis. Possimus perferendis consequatur nemo dolores porro voluptates modi deserunt temporibus rem veniam deleniti accusamus laborum voluptatum doloribus provident magni rerum veritatis ducimus earum atque nesciunt quasi voluptatem error saepe ut dignissimos sunt. Vero doloribus molestias laborum vel excepturi doloremque quam sunt impedit voluptatum dolorum. Eaque dicta unde totam porro hic facilis voluptatibus dolor nisi aut beatae sint aliquid adipisci aliquam perferendis ab autem velit necessitatibus ducimus error temporibus asperiores natus dolorem consectetur cupiditate alias. Ab excepturi iusto aut aspernatur accusantium ratione eveniet laborum nulla debitis incidunt. Illum voluptatum quas ut magni iusto ratione fugiat natus aut velit quaerat modi quibusdam laudantium accusantium dolore provident enim officia voluptatem illo culpa assumenda excepturi est pariatur distinctio neque quasi ab voluptate itaque ullam quae deleniti libero id at labore iure facilis quo a eum! Aliquid unde fugit ut voluptates natus laborum nostrum cumque laboriosam labore dolore hic deserunt magnam harum doloremque aliquam voluptas totam itaque quaerat officia dicta a nisi asperiores quod eos corporis fugiat illum quae esse ad error? Dolorum non possimus fugit libero ex voluptas enim officiis magni consequatur natus quod neque laboriosam mollitia est accusantium earum deleniti error placeat alias excepturi expedita sapiente incidunt exercitationem maiores nesciunt nulla atque! Unde pariatur laudantium explicabo itaque minima molestias optio necessitatibus quas expedita nobis. Iure ea esse sequi provident et pariatur unde excepturi voluptates autem ex incidunt magnam quasi natus laborum perspiciatis perferendis blanditiis aspernatur aliquid accusamus veniam quod illum quo fugiat vel ipsum est voluptatum aliquam corporis quaerat earum fuga dolor mollitia modi quia totam doloremque debitis. Nostrum ea veniam ut voluptatum beatae fugit eveniet non magni velit molestias a laudantium ex repellat numquam consequuntur eligendi mollitia? Fuga cum quia dolorum porro quis quasi eveniet adipisci a autem.</p>
+    </article>
+
+    <aside role="complementary">
+        <h3>Aside Stuff</h3>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    </aside>
+
+</main>
+
+<footer role="contentinfo">
+    <p>&copy; Lorem Ispum | Lorem Lorem</p>
+</footer>
+<style>
+    #skip-to-content {
+        padding: 1em;
+        position: absolute;
+        top: -40px;
+        left: 1em;
+        z-index: 1000;
+        color: white;
+    }
+
+    #skip-to-content:focus {
+        position: absolute;
+        top: 0;
+        background: #4593ff;
+    }
+</style>
