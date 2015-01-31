@@ -1,0 +1,166 @@
+---
+layout: example
+title: Semantic Elements
+pour: perceivable
+relatesto: 1.3.1
+accessible: true
+---
+<div class="well">
+    <div class="viewport">
+        <header class="header js-header" role="banner">
+            <h1>Page Title</h1>
+            <nav id="menu" class="menu js-menu" role="navigation">
+                <ul>
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 3</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main" role="main">
+            <p>Lorem ipsum <em class="highlight">dolor sit amet</em>, consectetur adipiscing elit. Pellentesque eros <a href="#">nibh</a>, tincidunt at libero sed, pellentesque porttitor purus. Nam lobortis a magna at pretium.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros nibh, tincidunt at libero sed, pellentesque porttitor purus. Nam lobortis a magna at pretium.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros nibh, tincidunt at libero sed, pellentesque porttitor purus. Nam lobortis a magna at pretium.</p>
+        </main>
+    </div>
+</div>
+<script>
+    (function(document, window, undefined) {
+
+        'use strict';
+
+        // Vars
+        var header = document.querySelector('.js-header'),
+        menu = document.querySelector('.js-menu'),
+        menuButton = document.createElement('button');
+
+        // Button properties
+        menuButton.classList.add('menu-button');
+        menuButton.setAttribute('id', 'menu-button');
+        menuButton.setAttribute('aria-label', 'Menu');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-controls', 'menu');
+        menuButton.innerHTML = '<span aria-hidden="true">&#x2261;</span>';
+
+        // Menu properties
+        menu.setAttribute('aria-hidden', 'true');
+        menu.setAttribute('aria-labelledby', 'menu-button');
+
+        // Add button to page
+        header.insertBefore(menuButton, menu);
+
+        // Handle button click event
+        menuButton.addEventListener('click', function () {
+
+            // If active...
+            if (menu.classList.contains('active')) {
+                // Hide
+                menu.classList.remove('active');
+                menu.setAttribute('aria-hidden', 'true');
+                menuButton.setAttribute('aria-expanded', 'false');
+            } else {
+                // Show
+                menu.classList.add('active');
+                menu.setAttribute('aria-hidden', 'false');
+                menuButton.setAttribute('aria-expanded', 'true');
+
+                // Set focus on first link
+                menu.children[0].children[0].children[0].focus();
+            }
+        }, false);
+
+    })(document, window);
+</script>
+<style>
+    body {
+    }
+
+    h1 {
+        font-size: 1em;
+        margin: 0;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .viewport {
+        background-color: #fff;
+        margin: 0 auto;
+        max-width: 20em;
+    }
+
+    .header {
+        background-color: #222;
+        color: #fff;
+        position: relative;
+    }
+
+    .header a {
+        color: #fff;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu li:nth-child(odd) {
+        background-color: #333;
+    }
+
+    .menu li:nth-child(even) {
+        background-color: #444;
+    }
+
+    .menu a {
+        display: block;
+        padding: .5em;
+    }
+
+    .no-js .menu {
+        display: block;
+    }
+
+    .menu-button {
+        background-color: transparent;
+        border: none;
+        font-size: 2em;
+        line-height: 1;
+        position: absolute;
+        right: .3em;
+        top: .2em;
+    }
+
+    .main {
+        padding: .5em 1em;
+    }
+
+    .visuallyhidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    .highlight {
+        background-color:yellow;
+        font-style:normal;
+    }
+</style>
