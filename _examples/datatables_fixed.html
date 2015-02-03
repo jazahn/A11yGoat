@@ -1,0 +1,52 @@
+---
+layout: example
+title: Data Tables
+pour: perceivable
+relatesto: 1.3.1
+accessible: true
+---
+<table>
+    <caption>Star Wars Trilogy Data</caption>
+    <tbody>
+    <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Director</th>
+        <th scope="col">Release Date</th>
+    </tr>
+    <tr>
+        <th scope="row">Star Wars: Episode IV - A New Hope</th>
+        <td>George Lucas</td>
+        <td>May 25th, 1977</td>
+    </tr>
+    <tr>
+        <th scope="row">Star Wars: Episode V - The Empire Strikes Back</th>
+        <td>Irvin Kershner</td>
+        <td>May 21st, 1980</td>
+    </tr>
+    <tr>
+        <th scope="row">Star Wars: Episode VI - Return of the Jedi</th>
+        <td>Richard Marquand</td>
+        <td>May 25th, 1983</td>
+    </tr>
+    </tbody>
+</table>
+<style>
+    body {
+        margin: 2em;
+    }
+
+    table {
+        border: solid #eee 1px;
+    }
+
+    caption {
+        padding: 1em;
+    }
+
+    th,
+    td {
+        border: solid #eee 1px;
+        padding: 1em;
+        text-align: left;
+    }
+</style>
