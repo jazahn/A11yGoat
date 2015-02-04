@@ -3,18 +3,18 @@ layout: example
 title: Captions
 pour: perceivable
 relatesto: 1.2.2
-description: "Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such.<br><br>
-
-While, as developers, we cannot ensure captions exist, we can do 2 things.<br><br>
-
-1. Say something if you find yourself working on non-captioned material.<br>
-2. Make sure you know how to add captions."
+description: "Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such."
 accessible: false
 explanation: "While the burden of captioning rests *mostly* on the shoulders of the content creator, as a developer, we need to know how to deal with captions. This is a normal HTML5 video tag with a random video.\n
 \n
 * Take a look at [the WEBVTT file](/A11yGoat/video/developerStories-subtitles-en.vtt)\n
 * [How HTML5 Captioning Works](http://www.3playmedia.com/how-it-works/how-to-guides/html5-video-captioning/)\n
-* Note that the track element cannot be used from a `file://` URL. To see tracks in action, put files on a web server."
+* Note that the track element cannot be used from a `file://` URL. To see tracks in action, put files on a web server.\n\n
+
+Remember that while, as developers, we cannot ensure captions exist, we can do 2 things.\n\n
+
+1. Say something if you find yourself working on non-captioned material.\n
+2. Make sure you know how to add captions."
 ---
 <video controls="" class="trackSupported">
     <source src="{{ "/video/developerStories-en.webm" | prepend: site.baseurl }}" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
