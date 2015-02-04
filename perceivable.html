@@ -7,7 +7,7 @@ description:
     {% assign sorted_examples = site.examples | sort:"relatesto" | where: "pour", "perceivable" %}
     {% for example in sorted_examples %}
     {% if example.accessible == false %}
-    <div class="col-lg-4">
+    <div class="col-lg-4" style="height:450px">
         <svg height="140" width="140">
             <title>{{ example.relatesto }}</title>
             <desc>This relates to section {{ example.relatesto }} of WCAG 2.0.</desc>
