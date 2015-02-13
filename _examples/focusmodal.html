@@ -7,9 +7,15 @@ description: "A web page needs to be navicable in a sequential order."
 accessible: false
 explanation: "When a modal opens, focus should come to the modal. When a modal closes, focus should return to the element that launched it.\n\n
 
- * [bootstrap modals](http://getbootstrap.com/javascript/#modals)\n
+## Custom Modal\n
+What you'll need to do is make sure the modal is focusable, with `tabindex=-1`. And ensure the focus returns to the button by directing it with javascript's (or jQuery's) `focus()`.\n\n
+
+## Bootstrap Modal\n
+If you copy paste the Bootstrap Modal from the examples, there is no problem, but a few things have been removed from the standard example.\n\n
+
  * [WCAG and tabindex](http://www.w3.org/TR/WCAG20-TECHS/H4.html)\n
- * [role='dialog'](http://www.w3.org/WAI/GL/wiki/Using_ARIA_role%3Ddialog_to_implement_a_modal_dialog_box)"
+ * [role='dialog'](http://www.w3.org/WAI/GL/wiki/Using_ARIA_role%3Ddialog_to_implement_a_modal_dialog_box)"\n
+ * [bootstrap modals](http://getbootstrap.com/javascript/#modals)
 ---
 <!-- custom modal -->
 <button type="button" id="mymodalbtn" class="btn btn-lg">
