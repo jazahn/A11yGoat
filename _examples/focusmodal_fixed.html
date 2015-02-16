@@ -1,0 +1,62 @@
+---
+layout: solution
+title: Focus Order
+pour: operable
+relatesto: 2.4.3
+description: "A web page needs to be navicable in a sequential order."
+accessible: true
+---
+<!-- custom modal -->
+<button type="button" id="mymodalbtn" class="btn btn-lg">
+    custom modal
+</button>
+<!-- bootstrap modal -->
+<button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myBSModal">
+    bootstrap modal
+</button>
+
+<!-- Custom Modal -->
+<div id="mymodal" tabindex="-1" role="dialog">
+    <div>this is the custom modal content</div>
+    <button id="mymodalclose" type="button" class="btn">close</button>
+</div>
+<script>
+    $('#mymodalbtn').click(function(){
+        $('#mymodal').show();
+    });
+    $('#mymodalclose').click(function(){
+        $('#mymodal').hide();
+        $('#mymodalbtn').focus();
+    });
+</script>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="myBSModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                bootstrap modal content
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #mymodal {
+        display: none;
+        position: fixed;
+        top: 10em;
+        border: 1px solid #000;
+        border-radius: 10px;
+        margin: 15px;
+        padding: 15px;
+        background: #fff;
+        box-shadow: 6px 6px 8px #696969;
+    }
+</style>

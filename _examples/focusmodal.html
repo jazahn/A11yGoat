@@ -1,0 +1,74 @@
+---
+layout: example
+title: Focus Order
+pour: operable
+relatesto: 2.4.3
+description: "A web page needs to be navicable in a sequential order."
+accessible: false
+explanation: "When a modal opens, focus should come to the modal. When a modal closes, focus should return to the element that launched it.\n\n
+
+## Custom Modal\n
+What you'll need to do is make sure the modal is focusable, with `tabindex=-1`. Ensure the focus returns to the button by directing it with javascript's (or jQuery's) `focus()`. Also give the modal a `role='dialog'` so a screen reader will be alerted to the change in context.\n\n
+
+## Bootstrap Modal\n
+If you copy paste the Bootstrap Modal from the examples, there is no problem, but a few things (the above things) have been removed from the standard example just to highlight what they do.\n\n
+
+ * [WCAG and tabindex](http://www.w3.org/TR/WCAG20-TECHS/H4.html)\n
+ * [role='dialog'](http://www.w3.org/WAI/GL/wiki/Using_ARIA_role%3Ddialog_to_implement_a_modal_dialog_box)\n
+ * [bootstrap modals](http://getbootstrap.com/javascript/#modals)"
+---
+<div class="well">
+    <!-- custom modal -->
+    <button type="button" id="mymodalbtn" class="btn btn-lg">
+        Custom Modal
+    </button>
+    <!-- bootstrap modal -->
+    <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myBSModal">
+        Bootstrap Modal
+    </button>
+</div>
+
+<!-- Custom Modal -->
+<div id="mymodal">
+    <div>This is the custom modal content.</div>
+    <button id="mymodalclose" type="button" class="btn">close</button>
+</div>
+<script>
+    $('#mymodalbtn').click(function(){
+        $('#mymodal').show();
+    });
+    $('#mymodalclose').click(function(){
+        $('#mymodal').hide();
+    });
+</script>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="myBSModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Bootstrap Modal title</h4>
+            </div>
+            <div class="modal-body">
+                This is the Bootstrap Modal content.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #mymodal {
+        display: none;
+        position: fixed;
+        top: 10em;
+        border: 1px solid #000;
+        border-radius: 10px;
+        margin: 15px;
+        padding: 15px;
+        background: #fff;
+        box-shadow: 6px 6px 8px #696969;
+    }
+</style>
