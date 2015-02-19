@@ -15,7 +15,7 @@ description:
                 <circle cx="70" cy="70" r="68" stroke="grey" stroke-width="3" fill="grey" />
                 <text x="40" y="75" fill="white" style="font-size: 2em;">{{ example.relatesto }}</text>
             </svg>
-            <div class="label label-info label-as-badge hide" data-toggle="tooltip" title="You have done this exercise.">
+            <div class="progresscheck label label-info label-as-badge hide" data-toggle="tooltip" title="You have done this exercise." data-path="{{ example.path }}">
                 <span class="glyphicon glyphicon-check"></span>
             </div>
         </div>
@@ -30,5 +30,17 @@ description:
 
 </div><!-- /.row -->
 <script>
-    console.log(JSON.parse(localStorage['saves']));
+    // initialize tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+    
+    var saves = JSON.parse(localStorage['saves']);
+    $('.progresscheck').each(function(index, element){
+        var path = $(element).data('path');
+        var pathvar = path.match(/\/(([a-z-_])+)\.html$/)[1];
+        if(saves[pathvar] != undefined){
+            $(element).removeClass('hide');
+        }
+    });
+
+
 </script>
