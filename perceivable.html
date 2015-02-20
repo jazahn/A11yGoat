@@ -3,11 +3,11 @@ layout: page
 title: Perceivable
 description:
 ---
-<div class="row">
+<ul class="list-inline">
     {% assign sorted_examples = site.examples | sort:"relatesto" | where: "pour", "perceivable" %}
     {% for example in sorted_examples %}
     {% if example.accessible == false %}
-    <div class="col-lg-4" style="height:450px">
+    <li class="" style="height:450px; width:220px; vertical-align: top;">
         <div class="">
             <svg height="140" width="140">
                 <title>{{ example.relatesto }}</title>
@@ -24,11 +24,12 @@ description:
         <h2>{{ example.title }}</h2>
         <p>{{ example.description }}</p>
         <p><a class="btn btn-default" href="{{ example.url | prepend: site.baseurl }}" role="button">Inaccessible Example &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
+    </li><!-- /.col-lg-4 -->
     {% endif %}
     {% endfor %}
 
-</div><!-- /.row -->
+</ul>
+
 <script>
     // initialize tooltips
     $('[data-toggle="tooltip"]').tooltip();
