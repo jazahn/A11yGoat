@@ -8,12 +8,18 @@ description:
     {% for example in sorted_examples %}
     {% if example.accessible == false %}
     <div class="col-lg-4" style="height:450px">
-        <svg height="140" width="140">
-            <title>{{ example.relatesto }}</title>
-            <desc>This relates to section {{ example.relatesto }} of WCAG 2.0.</desc>
-            <circle cx="70" cy="70" r="68" stroke="grey" stroke-width="3" fill="grey" />
-            <text x="40" y="75" fill="white" style="font-size: 2em;">{{ example.relatesto }}</text>
-        </svg>
+        <div class="">
+            <svg height="140" width="140">
+                <title>{{ example.relatesto }}</title>
+                <desc>This relates to section {{ example.relatesto }} of WCAG 2.0.</desc>
+                <circle cx="70" cy="70" r="68" stroke="grey" stroke-width="3" fill="grey" />
+                <text x="40" y="75" fill="white" style="font-size: 2em;">{{ example.relatesto }}</text>
+            </svg>
+            <div class="progresscheck label label-info label-as-badge hide" data-toggle="tooltip" title="You have done this exercise." data-path="{{ example.path }}">
+                <span class="glyphicon glyphicon-check"></span>
+            </div>
+        </div>
+
         <!-- <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;"> -->
         <h2>{{ example.title }}</h2>
         <p>{{ example.description }}</p>
@@ -23,3 +29,18 @@ description:
     {% endfor %}
 
 </div><!-- /.row -->
+<script>
+    // initialize tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+    
+    var saves = JSON.parse(localStorage['saves']);
+    $('.progresscheck').each(function(index, element){
+        var path = $(element).data('path');
+        var pathvar = path.match(/\/(([a-z-_])+)\.html$/)[1];
+        if(saves[pathvar] != undefined){
+            $(element).removeClass('hide');
+        }
+    });
+
+
+</script>
