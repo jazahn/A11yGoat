@@ -1,0 +1,19 @@
+---
+layout: page
+---
+{{ content }}
+<script>
+    // initialize tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+
+    var saves = JSON.parse(localStorage['saves']);
+    $('.progresscheck').each(function(index, element){
+        var path = $(element).data('path');
+        var pathvar = path.match(/\/(([a-z-_])+)\.html$/)[1];
+        if(saves[pathvar] != undefined){
+            $(element).removeClass('hide');
+        }
+    });
+
+
+</script>
