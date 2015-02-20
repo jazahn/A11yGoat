@@ -1,13 +1,13 @@
 ---
-layout: page
+layout: grouping
 title: Operable
 description:
 ---
-<div class="row">
+<ul class="list-inline">
     {% assign sorted_examples = site.examples | sort:"relatesto" | where: "pour", "operable" %}
     {% for example in sorted_examples %}
     {% if example.accessible == false %}
-    <div class="col-lg-4">
+    <li class="" style="height:450px; width:220px; vertical-align: top;">
         <svg height="140" width="140">
             <title>{{ example.relatesto }}</title>
             <desc>This relates to section {{ example.relatesto }} of WCAG 2.0.</desc>
@@ -18,8 +18,8 @@ description:
         <h2>{{ example.title }}</h2>
         <p>{{ example.description }}</p>
         <p><a class="btn btn-default" href="{{ example.url | prepend: site.baseurl }}" role="button">Inaccessible Example &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
+    </li>
     {% endif %}
     {% endfor %}
 
-</div><!-- /.row -->
+</ul>

@@ -20,11 +20,10 @@ description:
             </div>
         </div>
 
-        <!-- <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;"> -->
         <h2>{{ example.title }}</h2>
         <p>{{ example.description }}</p>
         <p><a class="btn btn-default" href="{{ example.url | prepend: site.baseurl }}" role="button">Inaccessible Example &raquo;</a></p>
-    </li><!-- /.col-lg-4 -->
+    </li>
     {% endif %}
     {% endfor %}
 
