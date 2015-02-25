@@ -1,7 +1,6 @@
 ---
 layout: markdown
 title: Workshop
-permalink: workshop
 ---
 
 ## What Will We Be Doing?
